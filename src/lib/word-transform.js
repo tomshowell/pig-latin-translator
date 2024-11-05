@@ -38,11 +38,13 @@ export const wordBeginsWithVowel = (str) => {
 // transforms a single words based off criteria
 export const transformWord = (str) => {
   let result = '';
-  // check begins with consonant
-  if (beginsWithConsonant(str)) {
-    result = wordBeginsWithConsonant(str);
-  } else { // or beings with vowel
-    result = wordBeginsWithVowel(str);
+  if (str.length > 0) {
+    // check begins with consonant
+    if (beginsWithConsonant(str)) {
+      result = wordBeginsWithConsonant(str);
+    } else { // or beings with vowel
+      result = wordBeginsWithVowel(str);
+    }
   }
 
   return result;
